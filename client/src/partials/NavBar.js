@@ -96,29 +96,29 @@ const Navbar = () => {
           <ul>
             <li>
               <Link to="/" onClick={() => closeNavbarAndNavigate("/")}>
-                Home
+                HOME
               </Link>
             </li>
             <li>
               <Link to="/blogs" onClick={() => closeNavbarAndNavigate("/blogs")}>
-                Blogs
+                BLOGS
               </Link>
             </li>
             <li>
               <Link to="/contact" onClick={() => closeNavbarAndNavigate("/contact")}>
-                Contact
+                CONTACT US
               </Link>
             </li>
             {username && (
               <>
                 <li>
                   <Link to="/create" onClick={() => closeNavbarAndNavigate("/create")}>
-                    Create new post
+                    CREATE NEW POST
                   </Link>
                 </li>
                 <li>
                   <a onClick={() => { logout(); closeNavbarAndNavigate("/"); }}>
-                    Logout ({username})
+                    LOGOUT ({username})
                   </a>
                 </li>
               </>
@@ -127,12 +127,12 @@ const Navbar = () => {
               <>
                 <li>
                   <Link to="/login" onClick={() => closeNavbarAndNavigate("/login")}>
-                    Login
+                    LOGIN
                   </Link>
                 </li>
                 <li>
                   <Link to="/register" onClick={() => closeNavbarAndNavigate("/register")}>
-                    Register
+                    REGISTER
                   </Link>
                 </li>
               </>

@@ -93,7 +93,7 @@ const TakeProduct = () => (
     <div className="takeproductinfo">
       "Empower your journey with the wonderer's pen, your constant companion for
       boundless insights and inspiration. Whether you're on a commute or
-      savoring a quiet moment, let Blogosphere be your go-to source, making
+      savoring a quiet moment, let us be your go-to source, making
       every place and every moment an opportunity to discover, learn, and grow."
     </div>
   </div>

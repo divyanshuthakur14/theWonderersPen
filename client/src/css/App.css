@@ -107,6 +107,9 @@ form.register h1 {
   text-align: center;
 }
 
+
+
+
 div.post-page div.image {
   max-height: 300px;
   display: flex;
@@ -117,23 +120,95 @@ div.post-page div.image img {
   object-position: center center;
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  div.post-page div.image {
+    max-height: 200px; /* Reduce image height for smaller screens */
+    width: 200px;
+  }
+
+  div.post-page div.image img {
+    width: 200px;
+    height: auto;
+  }
+
+  div.content {
+      max-width: 90vw; /* Use 90% of the viewport width */
+      padding: 10px;
+      box-sizing: border-box; /* Includes padding in total width */
+  }
+
+  div.content p {
+    font-size: 14px; /* Adjust font size */
+    line-height: 1.5rem;
+    margin: 20px 0; /* Reduce margin for smaller screens */
+    overflow-wrap: break-word;
+    white-space: normal; /* Ensures text breaks naturally */
+  }
+
+  div.content li {
+    font-size: 14px; /* Adjust list item font size */
+    margin-bottom: 8px; /* Reduce margin for smaller screens */
+    overflow-wrap: break-word;
+    white-space: normal; /* Ensures text breaks naturally */
+  }
+
+  div.post-page h1 {
+    font-size: 1.5rem; /* Adjust title size */
+    text-align: left;
+    margin: 10px 0;
+    overflow-wrap: break-word;
+    white-space: normal; /* Ensures text breaks naturally */
+  }
+
+  div.post-page time,
+  div.post-page div.author {
+    font-size: 0.8rem; /* Adjust font size for time and author */
+    text-align: left;
+  }
+
+  div.post-page div.author {
+    margin-bottom: 15px;
+  }
+
+  div.post-page a.edit-btn {
+    padding: 10px 20px; /* Adjust padding for the edit button */
+    font-size: 14px; /* Adjust font size */
+    text-align: left;
+    
+  }
+}
+
+
+@media (max-width: 768px){
+  div.post div.image {
+    max-height: 200px; /* Reduce image height for smaller screens */
+    width: 200px;
+  }
+
+  div.post div.image img {
+    width: 200px;
+    height: auto;
+  }
+}
+
 div.post-page a {
   color: #333;
   text-decoration: underline;
 }
 div.post-page h1 {
-  text-align: center;
+  text-align: left;
   margin: 10px 0 5px;
 }
 div.post-page time {
-  text-align: center;
+  text-align: left;
   display: block;
   font-size: 1rem;
   color: #aaa;
   margin: 10px 0;
 }
 div.post-page div.author {
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
   font-size: 0.7rem;
   font-weight: bold;
@@ -141,18 +216,24 @@ div.post-page div.author {
 div.content p {
   line-height: 1.7rem;
   margin: 30px 0;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 div.content li {
   margin-bottom: 10px;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 div.edit-row {
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 div.post-page a.edit-btn {
   background-color: #333;
   display: inline-flex;
-  align-items: center;
+  align-items: left;
   gap: 5px;
   color: #fff;
   padding: 15px 30px;

@@ -54,6 +54,7 @@ export default function CreatePost() {
   }
 
   return (
+    <div className="create-post-container">
     <form onSubmit={createNewPost}>
       <input
         type="text"
@@ -75,5 +76,6 @@ export default function CreatePost() {
       <Editor value={content} onChange={setContent} />
       <button style={{ marginTop: "5px" }}>Create post</button>
     </form>
+    </div>
   );
 }
