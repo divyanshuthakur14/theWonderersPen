@@ -76,13 +76,18 @@ const Navbar = () => {
 
   const username = userInfo?.username;
 
+  const closeNavbarAndNavigate = (path) => {
+    setShowNavbar(false);  // Close the menu
+    navigate(path);  // Navigate to the selected path
+  };
+
   return (
     <nav className="navbar">
       <div className="container">
         <div className="logo">
-        <Link to="/">
-          <img src="/The Wonderer's Pen.png" alt="logo" />
-        </Link>
+          <Link to="/">
+            <img src="/The Wonderer's Pen.png" alt="logo" />
+          </Link>
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <Hamburger />
@@ -90,32 +95,45 @@ const Navbar = () => {
         <div className={`nav-elements ${showNavbar && "active"}`}>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={() => closeNavbarAndNavigate("/")}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/blogs">Blogs</Link>
+              <Link to="/blogs" onClick={() => closeNavbarAndNavigate("/blogs")}>
+                Blogs
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" onClick={() => closeNavbarAndNavigate("/contact")}>
+                Contact
+              </Link>
             </li>
             {username && (
               <>
                 <li>
-                  <Link to="/create">Create new post</Link>
+                  <Link to="/create" onClick={() => closeNavbarAndNavigate("/create")}>
+                    Create new post
+                  </Link>
                 </li>
-
                 <li>
-                  <a onClick={logout}>Logout ({username})</a>
+                  <a onClick={() => { logout(); closeNavbarAndNavigate("/"); }}>
+                    Logout ({username})
+                  </a>
                 </li>
               </>
             )}
             {!username && (
               <>
                 <li>
-                  <Link to="/login">Login</Link>
+                  <Link to="/login" onClick={() => closeNavbarAndNavigate("/login")}>
+                    Login
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/register">Register</Link>
+                  <Link to="/register" onClick={() => closeNavbarAndNavigate("/register")}>
+                    Register
+                  </Link>
                 </li>
               </>
             )}

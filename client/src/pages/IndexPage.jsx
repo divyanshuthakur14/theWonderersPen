@@ -1,4 +1,5 @@
 import "../css/home.css";
+import { useEffect } from "react";
 
 const About = () => (
   <div className="about">
@@ -20,21 +21,31 @@ const About = () => (
   </div>
 );
 
-const Brief = () => (
-  <div className="brief">
-    <div className="left">
-      <i class="fas fa-globe-americas"></i>
+
+
+const Brief = () => {
+  useEffect(() => {
+    const typingElement = document.querySelector('.typing-text');
+    typingElement.addEventListener('animationend', () => {
+      typingElement.classList.add('finished'); // Add 'finished' class when typing ends
+    });
+  }, []);
+
+  return (
+    <div className="brief">
+      <div className="left">
+        <i className="fas fa-globe-americas"></i>
+      </div>
+      <div className="right">
+        <p className="typing-text">
+          In the hustle of the 21st century, where schedules are demanding and time is of the essence, 
+          The Wonderer's Pen stands as your go-to destination for a different kind of shopping - a shopping spree for ideas, knowledge, and inspiration.
+        </p>
+      </div>
     </div>
-    <div className="right">
-      <p>
-        In the hustle of the 21st century, where schedules are demanding and
-        time is of the essence, The Wonderer's Pen stands as your go-to destination for
-        a different kind of shopping - a shopping spree for ideas, knowledge,
-        and inspiration.
-      </p>
-    </div>
-  </div>
-);
+  );
+};
+
 
 const WhyBuy = () => (
   <div className="whybuy">
@@ -93,9 +104,13 @@ const Testimonial = () => (
     <div className="testimonialcomment">
       " Love The Wonderer's Pen. So nice! So good! Could not live without! "
     </div>
-    <div className="testimonialcustomer">-Satisfied Customer</div>
+    <div className="testimonialcustomer">
+      <span className="bouncing-customer">- Satisfied Customer</span>
+    </div>
   </div>
 );
+
+
 
 const Reasons = () => (
   <div className="reasons">
@@ -130,7 +145,7 @@ const Buying = () => (
     <div className="buyinghead">Why are you still reading</div>
     <div className="buyingbutton">
       
-        Dive into the Wonderer's Pen now and pen your note!
+        Dive into the Wonderer's Pen now and pen your note NOW!
       
     </div>
   </div>

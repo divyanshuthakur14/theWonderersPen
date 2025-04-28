@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* General container styles */
 .login-container, .register-container {
   width: 100%;
@@ -66,59 +65,10 @@ input {
 /* Button styles */
 .button-forms {
   padding: 8px; /* Reduced padding */
-=======
-.login-container {
-  max-width: 400px;
-  margin: 50px auto;
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-fieldset {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.legend {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.user-image-container {
-  margin-bottom: 20px;
-}
-
-.user-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-input {
-  margin: 10px 0;
-  padding: 8px;
-  width: 100%;
-}
-
-.button-forms {
-  padding: 10px;
->>>>>>> cf919aac0eb40fdfd303034283be5891a05697b4
   background-color: #007bff;
   color: #fff;
   border: none;
   cursor: pointer;
-<<<<<<< HEAD
   transition: background-color 0.3s ease;
   width: 100%;
   font-size: 14px; /* Reduced font size */
@@ -127,15 +77,12 @@ input {
 
 .button-forms:hover {
   background-color: #0056b3;
-=======
->>>>>>> cf919aac0eb40fdfd303034283be5891a05697b4
 }
 
 .register-btn {
   background-color: #28a745;
 }
 
-<<<<<<< HEAD
 .register-btn:hover {
   background-color: #218838;
 }
@@ -250,26 +197,4 @@ html, body {
   .register-btn {
     font-size: 12px;
   }
-=======
-.create-account-container {
-  margin-top: 20px;
-}
-
-.create-account-container p {
-  margin-bottom: 10px;
-}
-
-.register-container {
-  max-width: 400px;
-  margin: 50px auto;
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
-}
-
-.register-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
->>>>>>> cf919aac0eb40fdfd303034283be5891a05697b4
 }
