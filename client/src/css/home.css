@@ -1,0 +1,335 @@
+/* General Styling */
+body {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.about {
+  height: 95vh;
+  background: #7C4585;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  padding: 0 10%;
+}
+
+.aboutitem {
+  padding: 10px;
+}
+
+.header {
+  font-size: 4rem;
+}
+
+.smallinfo {
+  font-size: 1.8rem;
+}
+
+button {
+  border: 2px solid white;
+  padding: 10px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.button-home {
+  background: transparent;
+}
+
+/* Brief Section */
+.brief {
+  margin: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.fa-globe-americas {
+  font-size: 130px;
+  color: #154c79;
+}
+
+.right {
+  font-family: "Nunito Sans", sans-serif;
+  margin-left: 15%;
+  margin-right: 10%;
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+/* WhyBuy Section */
+.whybuy {
+  background-color: #C95792;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  padding: 5%;
+  font-size: 1.2rem;
+}
+
+.fa-bolt, .fa-university, .fa-heart {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.brief1, .brief2, .brief3 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 2%;
+}
+
+.brief1, .brief2, .brief3 {
+  margin-bottom: 20px;
+}
+
+/* TakeProduct Section */
+.takeproduct {
+  background-color: #F8B55F;
+  padding: 5%;
+  color: white;
+}
+
+.takeproducthead {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.takeproductinfo {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+/* Testimonial Section */
+.testimonial {
+  padding: 5%;
+  background-color: rgba(0, 126, 206, 0.1);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.testimonialcomment {
+  font-size: 1.8rem;
+}
+
+.testimonialcustomer {
+  font-style: italic;
+  margin-top: 5px;
+  font-size: 1.05rem;
+}
+
+/* Reasons Section */
+.reasons {
+  background-color: #3D365C;
+  color: white;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.reasonss {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 45px;
+  font-size: 1.3rem;
+}
+
+.reasonshead {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.reasons1, .reasons2 {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* Buying Section */
+.buying {
+  padding: 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: white;
+}
+
+.buyinghead {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+/* Footer */
+.footer {
+  background-color: #7C4585;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content li {
+  margin: 0 10px;
+  display: inline;
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.developer-credits {
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+.developer-credits a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Smartphones (Portrait) */
+@media screen and (max-width: 768px) {
+  .about {
+    height: auto;
+    padding: 0 5%;
+  }
+
+  .header {
+    font-size: 2.5rem;
+  }
+
+  .smallinfo {
+    font-size: 1.4rem;
+  }
+
+  .brief {
+    flex-direction: column;
+    margin: 3%;
+  }
+
+  .right {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1.1rem;
+  }
+
+  .whybuy {
+    flex-direction: column;
+    padding: 3%;
+    font-size: 1rem;
+  }
+
+  .brief1, .brief2, .brief3 {
+    padding: 2%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .takeproductinfo {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .testimonialcomment {
+    font-size: 1.4rem;
+  }
+
+  .testimonialcustomer {
+    font-size: 1rem;
+  }
+
+  .reasonshead {
+    font-size: 1.5rem;
+  }
+
+  .reasonss {
+    flex-direction: column;
+    font-size: 1.1rem;
+  }
+
+  .buying {
+    font-size: 1.2rem;
+  }
+
+  .buyinghead {
+    font-size: 1.5rem;
+  }
+}
+
+/* Smaller Smartphones */
+@media screen and (max-width: 480px) {
+  .header {
+    font-size: 2rem;
+  }
+
+  .smallinfo {
+    font-size: 1.2rem;
+  }
+
+  .right {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1rem;
+  }
+
+  .takeproductinfo {
+    font-size: 1rem;
+  }
+
+  .testimonialcomment {
+    font-size: 1.2rem;
+  }
+
+  .testimonialcustomer {
+    font-size: 0.95rem;
+  }
+
+  .reasonss {
+    font-size: 1rem;
+    flex-direction: column;
+  }
+
+  .buying {
+    font-size: 1rem;
+  }
+}
