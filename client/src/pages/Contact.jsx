@@ -4,16 +4,14 @@ import Navbar from "../partials/NavBar";
 import Footer from "../partials/Footer";
 
 const Contact = () => {
-  // State to handle form data
+  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Create a new object with the form data
     const contactData = {
       name,
       email,
@@ -21,7 +19,6 @@ const Contact = () => {
     };
 
     try {
-      // Send data to backend
       const response = await fetch("https://thewondererspenbackend.onrender.com/contact", {
         method: "POST",
         headers: {

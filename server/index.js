@@ -3,7 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const User = require("./models/User");
 const Post = require("./models/Post");
-const Contact = require("./models/Contact"); // Import the Contact model
+const Contact = require("./models/Contact"); 
 const bcrypt = require("bcryptjs");
 const app = express();
 const jwt = require("jsonwebtoken");
@@ -58,7 +58,6 @@ app.post("/login", async (req, res) => {
   }
   const passOk = bcrypt.compareSync(password, userDoc.password);
   if (passOk) {
-    // logged in
     jwt.sign(
       { username, id: userDoc._id },
       secret,
@@ -100,7 +99,6 @@ app.post("/post", uploadMiddleware.single("file"), async (req, res) => {
   const ext = parts[parts.length - 1];
   const newPath = path + "." + ext;
   fs.renameSync(path, newPath);
-
   const { token } = req.cookies;
   jwt.verify(token, secret, {}, async (err, info) => {
     if (err) throw err;
@@ -125,7 +123,6 @@ app.put("/post", uploadMiddleware.single("file"), async (req, res) => {
     newPath = path + "." + ext;
     fs.renameSync(path, newPath);
   }
-
   const { token } = req.cookies;
   jwt.verify(token, secret, {}, async (err, info) => {
     if (err) throw err;
@@ -142,7 +139,6 @@ app.put("/post", uploadMiddleware.single("file"), async (req, res) => {
       content,
       cover: newPath ? newPath : postDoc.cover,
     });
-
     res.json(postDoc);
   });
 });
@@ -162,25 +158,17 @@ app.get("/post/:id", async (req, res) => {
   res.json(postDoc);
 });
 
-
-
-// Contact Form Submission Route
 app.post("/contact", async (req, res) => {
   try {
     const { name, email, message } = req.body;
-
-    // Validate that all fields are provided
     if (!name || !email || !message) {
       return res.status(400).json({ error: "All fields are required" });
     }
-
-    // Create a new Contact document
     const newContact = await Contact.create({
       name,
       email,
       message,
     });
-
     res.status(200).json({
       message: "Your message has been sent successfully!",
       contact: newContact,
@@ -191,10 +179,7 @@ app.post("/contact", async (req, res) => {
   }
 });
 
-
-// Start the server
 const PORT = process.env.PORT || 4000;
-
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

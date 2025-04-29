@@ -1,10 +1,10 @@
 /* General container styles */
 .login-container, .register-container {
   width: 100%;
-  max-width: 320px; /* Decreased max-width further */
+  max-width: 320px; 
   margin: 50px auto;
   border: 1px solid #ccc;
-  padding: 10px; /* Reduced padding */
+  padding: 10px;
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -21,7 +21,7 @@
   background: linear-gradient(135deg, #7C4585, #154c79);
 }
 
-/* Form Layout */
+
 .login-form, .register-form {
   display: flex;
   flex-direction: column;
@@ -30,55 +30,55 @@
 
 }
 
-/* Fieldset styles */
+
 fieldset {
   border: 1px solid #ccc;
-  padding: 6px; /* Reduced padding */
+  padding: 6px; 
   border-radius: 5px;
-  margin-bottom: 12px; /* Reduced margin */
+  margin-bottom: 12px;
   width: 100%;
 }
 
 .legend {
-  font-size: 1.1em; /* Reduced font size */
+  font-size: 1.1em; 
   font-weight: bold;
-  margin-bottom: 6px; /* Reduced margin */
+  margin-bottom: 6px; 
 }
 
-/* User image styling */
+
 .user-image-container {
-  margin-bottom: 12px; /* Reduced margin */
+  margin-bottom: 12px; 
 }
 
 .user-image {
-  width: 70px; /* Reduced size */
+  width: 70px; 
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
 }
 
-/* Input fields */
+
 input {
-  margin: 6px 0; /* Reduced margin */
-  padding: 8px; /* Reduced padding */
+  margin: 6px 0; 
+  padding: 8px; 
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 14px; /* Reduced font size */
+  font-size: 14px; 
 }
 
-/* Button styles */
+
 .button-forms {
-  padding: 8px; /* Reduced padding */
+  padding: 8px; 
   background-color: #007bff;
   color: #fff;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%;
-  font-size: 14px; /* Reduced font size */
+  font-size: 14px; 
   border-radius: 5px;
 }
 
@@ -94,17 +94,17 @@ input {
   background-color: #218838;
 }
 
-/* Create account container */
+/* Create account */
 .create-account-container {
-  margin-top: 12px; /* Reduced margin */
+  margin-top: 12px; 
 }
 
 .create-account-container p {
-  margin-bottom: 8px; /* Reduced margin */
-  font-size: 13px; /* Reduced font size */
+  margin-bottom: 8px; 
+  font-size: 13px; 
 }
 
-/* Ensure login page is centered */
+
 html, body {
   height: 100%;
   margin: 0;
@@ -120,7 +120,6 @@ html, body {
   box-sizing: border-box;
 }
 
-/* Adjustments for tablets and below */
 @media (max-width: 1024px) {
   .user-image {
     width: 60px;
@@ -137,7 +136,6 @@ html, body {
   }
 }
 
-/* Adjustments for small devices (phones in portrait mode) */
 @media (max-width: 768px) {
   .user-image {
     width: 55px;
@@ -154,7 +152,6 @@ html, body {
   }
 }
 
-/* Adjustments for extra small devices (phones in landscape mode) */
 @media (max-width: 480px) {
   .login-container, .register-container {
     padding: 12px;
@@ -180,7 +177,6 @@ html, body {
   }
 }
 
-/* Adjustments for very small devices */
 @media (max-width: 360px) {
   .login-container, .register-container {
     padding: 8px;
@@ -202,8 +198,8 @@ html, body {
   }
 
   .create-account-container a {
-    color: white; /* Make the link text white */
-    text-decoration: none; /* Remove underline if needed */
+    color: white; 
+    text-decoration: none; 
   }
 
   .register-btn {

@@ -1,46 +1,43 @@
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
 import Editor from "../utils/Editor";
-import Cookies from "js-cookie"; // Import js-cookie for cookie handling
+import Cookies from "js-cookie"; 
 
 export default function CreatePost() {
   const [title, setTitle] = useState("");
   const [summary, setSummary] = useState("");
   const [content, setContent] = useState("");
-  const [files, setFiles] = useState(null); // Ensure files is initially null
+  const [files, setFiles] = useState(null); 
   const [redirect, setRedirect] = useState(false);
 
   async function createNewPost(ev) {
     ev.preventDefault();
 
-    // Ensure a file is selected
     if (!files || files.length === 0) {
       alert("Please select a file before submitting.");
       return;
     }
 
-    // Log the file and data to check if they are correct
+    
     console.log("Files:", files);
 
-    // Create FormData object to send data
     const data = new FormData();
     data.set("title", title);
     data.set("summary", summary);
     data.set("content", content);
     data.set("file", files[0]);
 
-    // Log FormData to check if the data is being set correctly
+    
     for (let pair of data.entries()) {
       console.log(pair[0], pair[1]);
     }
-    // Send the data to the backend with token in headers
+    
     const response = await fetch("https://thewondererspenbackend.onrender.com/post", {
       method: "POST",
       body: data,
-      credentials: "include", // Ensure cookies are sent
+      credentials: "include", 
     });
 
-    // If the response is successful, redirect
     if (response.ok) {
       setRedirect(true);
     } else {
@@ -48,7 +45,7 @@ export default function CreatePost() {
     }
   }
 
-  // Redirect to homepage after creating the post
+  
   if (redirect) {
     return <Navigate to={"/"} />;
   }

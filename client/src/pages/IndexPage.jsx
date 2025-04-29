@@ -27,7 +27,7 @@ const Brief = () => {
   useEffect(() => {
     const typingElement = document.querySelector('.typing-text');
     typingElement.addEventListener('animationend', () => {
-      typingElement.classList.add('finished'); // Add 'finished' class when typing ends
+      typingElement.classList.add('finished'); 
     });
   }, []);
 

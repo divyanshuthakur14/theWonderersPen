@@ -86,8 +86,6 @@ export default function LoginPage() {
           Create New Account
         </button>
       </div>
-
-      {/* Toast Container for displaying success or error messages */}
       <ToastContainer />
     </div>
   );

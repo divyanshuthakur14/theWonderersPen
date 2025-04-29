@@ -208,7 +208,6 @@ section {
   color: #00bcd4;
 }
 
-/* Small devices and below (Mobile view) */
 @media (max-width: 600px) {
   .section-header h2 {
     font-size: 2em;
@@ -262,7 +261,7 @@ section {
   }
 }
 
-/* Medium devices (Tablet view) */
+
 @media (max-width: 768px) {
   .section-header h2 {
     font-size: 2.5em;
@@ -297,7 +296,6 @@ section {
   }
 }
 
-/* Larger screens (Desktop view) */
 @media (min-width: 991px) {
   .contact-form {
     width: 45%;

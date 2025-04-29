@@ -77,8 +77,8 @@ const Navbar = () => {
   const username = userInfo?.username;
 
   const closeNavbarAndNavigate = (path) => {
-    setShowNavbar(false);  // Close the menu
-    navigate(path);  // Navigate to the selected path
+    setShowNavbar(false);  
+    navigate(path);  
   };
 
   return (

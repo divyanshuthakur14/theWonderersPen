@@ -143,11 +143,11 @@ button:hover {
   white-space: normal;
   overflow-wrap: break-word;
   word-break: break-word;
-  animation: typing 2s steps(100, end) 1; /* Adjust the time to make it faster */
+  animation: typing 2s steps(100, end) 1; 
 }
 
 .typing-text.finished {
-  /* No border, so the cursor is removed */
+  
 }
 
 @keyframes typing {
@@ -159,10 +159,6 @@ button:hover {
   }
 }
 
-
-
-
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -183,7 +179,6 @@ button:hover {
   }
 }
 
-/* Responsive improvement */
 @media (max-width: 768px) {
   .brief {
     flex-direction: column;
@@ -196,7 +191,6 @@ button:hover {
     text-align: center;
   }
 }
-
 
 /* WhyBuy Section */
 .whybuy {
@@ -231,7 +225,7 @@ button:hover {
 
 .fa-bolt:hover, .fa-university:hover, .fa-heart:hover {
   transform: scale(1.2);
-  color: #FFD700; /* Golden hover effect */
+  color: #FFD700;
 }
 
 .brief1, .brief2, .brief3 {
@@ -269,7 +263,7 @@ button:hover {
 
 .brief1 p:hover, .brief2 p:hover, .brief3 p:hover {
   transform: translateY(-5px);
-  color: #FFD700; /* Golden hover effect for text */
+  color: #FFD700; 
 }
 
 .brief1 p {
@@ -286,7 +280,6 @@ button:hover {
   animation-delay: 0.6s;
 }
 
-/* Bounce animation for text */
 @keyframes bounceIn {
   0% {
     opacity: 0;
@@ -302,7 +295,6 @@ button:hover {
   }
 }
 
-/* Add some subtle glow effect to the icons */
 @keyframes iconGlow {
   0% {
     text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700;
@@ -319,22 +311,19 @@ button:hover {
   animation: iconGlow 1.5s infinite alternate;
 }
 
-
-
-
 /* TakeProduct Section */
 .takeproduct {
   background: linear-gradient(to right, #F8B55F, #F5A623);
   padding: 5%;
   color: white;
-  opacity: 1; /* Set to 1 initially */
-  transform: translateY(0); /* Normal position */
-  transition: all 0.5s ease-in-out; /* Smooth transition */
+  opacity: 1; 
+  transform: translateY(0); 
+  transition: all 0.5s ease-in-out; 
 }
 
 .takeproduct:hover {
-  opacity: 0.9; /* Slightly fade out when hovered */
-  transform: translateY(-10px); /* Slight upward movement */
+  opacity: 0.9; 
+  transform: translateY(-10px); 
 }
 
 .takeproducthead {
@@ -356,21 +345,17 @@ button:hover {
 }
 
 .takeproduct:hover .takeproducthead {
-  transform: translateY(-10px); /* Move header upwards on hover */
+  transform: translateY(-10px); 
 }
 
 .takeproduct:hover .takeproductinfo {
-  transform: translateY(-10px); /* Move content upwards on hover */
-  opacity: 0.9; /* Fade out content a bit on hover */
+  transform: translateY(-10px);
+  opacity: 0.9; 
 }
 
-/* Optional: Add a shadow effect on hover for emphasis */
 .takeproduct:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
-
-
-
 
 /* Testimonial Section */
 .testimonial {
@@ -383,8 +368,7 @@ button:hover {
   margin: 40px auto;
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 1s ease-out forwards, bounce 2s infinite; /* Added bounce animation */
-}
+  animation: fadeInUp 1s ease-out forwards, bounce 2s infinite;
 
 .testimonialcomment {
   font-size: 1.5rem;
@@ -407,7 +391,7 @@ button:hover {
 
 .bouncing-customer {
   display: inline-block;
-  animation: bouncingText 1.5s ease-in-out infinite; /* Persistent bounce animation */
+  animation: bouncingText 1.5s ease-in-out infinite; 
 }
 
 @keyframes fadeInUp {
@@ -439,17 +423,14 @@ button:hover {
   }
 }
 
-/* Bounce effect for the customer name */
 @keyframes bouncingText {
   0%, 100% {
-    transform: translateY(0); /* Start and end at normal position */
+    transform: translateY(0); 
   }
   50% {
-    transform: translateY(-10px); /* Move up at the middle */
+    transform: translateY(-10px); 
   }
 }
-
-
 
 /* Reasons Section */
 .reasons {
@@ -527,9 +508,6 @@ button:hover {
   text-decoration: none;
 }
 
-/* Media Queries for Responsiveness */
-
-/* Smartphones (Portrait) */
 @media screen and (max-width: 768px) {
   .about {
     height: auto;
@@ -598,7 +576,6 @@ button:hover {
   }
 }
 
-/* Smaller Smartphones */
 @media screen and (max-width: 480px) {
   .header {
     font-size: 2rem;
@@ -634,4 +611,5 @@ button:hover {
   .buying {
     font-size: 1rem;
   }
+}
 }
