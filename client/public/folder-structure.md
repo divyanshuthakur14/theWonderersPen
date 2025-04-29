@@ -1,17 +1,16 @@
 ```
 └── 📁client
-    └── .env
-    └── .env.example
     └── .gitignore
     └── package-lock.json
     └── package.json
     └── 📁public
-        └── blogosphere-logo.png
-        └── blogosphere-white-logo.png
+        └── _redirects
+        └── folder-structure.md
         └── index.html
-        └── logo.png
         └── manifest.json
         └── robots.txt
+        └── The Wonderer's Pen.png
+        └── The Wonderer's Pen2.png
     └── 📁src
         └── App.js
         └── 📁css
