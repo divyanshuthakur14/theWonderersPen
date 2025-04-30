@@ -369,6 +369,7 @@ button:hover {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s ease-out forwards, bounce 2s infinite;
+}
 
 .testimonialcomment {
   font-size: 1.5rem;
@@ -441,6 +442,8 @@ button:hover {
   justify-content: center;
   flex-direction: column;
 }
+
+
 
 .reasonss {
   display: flex;
@@ -611,5 +614,4 @@ button:hover {
   .buying {
     font-size: 1rem;
   }
-}
 }
