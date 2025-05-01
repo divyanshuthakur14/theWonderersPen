@@ -45,7 +45,7 @@ export default function PostPage() {
         </div>
       )}
       <div className="image">
-        <img src={`https://thewondererspenbackend.onrender.com/${postInfo.cover}`} alt="" />
+      <img src={postInfo.cover} alt="" />
       </div>
       <div
         className="content"
