@@ -1,5 +1,7 @@
 import Post from "../partials/Post";
 import { useEffect, useState } from "react";
+import "../css/home.css";
+
 
 export default function BlogsPage() {
   const [posts, setPosts] = useState([]);
@@ -21,23 +23,16 @@ export default function BlogsPage() {
 
   useEffect(() => {
     fetchPosts();
-  }, [search]); // refetch on search change
+  }, [search]); 
 
   return (
-    <div style={{ marginTop: "50px", textAlign: "center" }}>
+    <div className="blogs-container">
       <input
         type="text"
         placeholder="Search posts..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        style={{
-          padding: "10px",
-          width: "60%",
-          borderRadius: "8px",
-          border: "1px solid #ccc",
-          marginBottom: "30px",
-          fontSize: "16px"
-        }}
+        className="search-input"
       />
       <div>
         {posts.length > 0 ? (
