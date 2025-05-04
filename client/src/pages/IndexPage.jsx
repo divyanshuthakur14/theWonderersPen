@@ -1,23 +1,26 @@
 import "../css/home.css";
+import "../css/about.css";
 import { useEffect } from "react";
 
 const About = () => (
   <div className="about">
-    <div className="aboutitem header">Discover the Wonderer's Pen</div>
-    <div className="aboutitem smallinfo">
-      Experience! Explore Captivating Insights, Inspiring Stories, <br /> and
-      Thought-Provoking Articles.
+    <div className="about-left">
+      <div className="aboutitem header">
+        Discover the Wonderer's Pen
+      </div>
+      <div className="aboutitem smallinfo">
+        Experience! Explore Captivating Insights, Inspiring Stories, and
+        Thought-Provoking Articles.
+      </div>
+      <div className="aboutitem buy">
+        <button className="button-home" onClick={() => {window.location.href = "/blogs";}}>
+          Explore now
+        </button>
+      </div>
     </div>
-    <div className="aboutitem buy">
-      <button
-        className="button-home"
-        onClick={() => {
-          window.location.href = "/blogs";
-        }}
-      >
-        Explore now
-      </button>
-    </div>
+      <div className="about-right">
+        <img src="/writing.jpg" alt="Writing" className="side-image" />
+      </div>
   </div>
 );
 
@@ -45,6 +48,7 @@ const Brief = () => {
     </div>
   );
 };
+
 
 
 const WhyBuy = () => (
@@ -87,6 +91,8 @@ const WhyBuy = () => (
   </div>
 );
 
+
+
 const TakeProduct = () => (
   <div className="takeproduct">
     <div className="takeproducthead">Carry a notebook with You Everywhere</div>
@@ -98,6 +104,8 @@ const TakeProduct = () => (
     </div>
   </div>
 );
+
+
 
 const Testimonial = () => (
   <div className="testimonial">
@@ -140,16 +148,18 @@ const Reasons = () => (
   </div>
 );
 
+
+
 const Buying = () => (
   <div className="buying">
     <div className="buyinghead">Why are you still reading</div>
     <div className="buyingbutton">
-      
         Dive into the Wonderer's Pen now and pen your note NOW!
-      
     </div>
   </div>
 );
+
+
 
 const IndexPage = () => (
   <div className="home-body">
@@ -162,5 +172,7 @@ const IndexPage = () => (
     <Buying />
   </div>
 );
+
+
 
 export default IndexPage;

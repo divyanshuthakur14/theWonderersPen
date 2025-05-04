@@ -18,11 +18,10 @@ div.body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #7C4585, #154c79);
+  background:black;
   background-size: cover;
   background-position: center;
   position: relative;
-  margin-top: 10px; 
 }
 
 div.body::after {
@@ -32,7 +31,7 @@ div.body::after {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(135deg, #7C4585, #154c79);
+  background: black
 }
 
 section {
@@ -184,11 +183,13 @@ section {
   color: #666;
 }
 
-.contact-form .input-box input:focus ~ span,
-.contact-form .input-box textarea:focus ~ span {
+
+.contact-form .input-box input:valid ~ span,
+.contact-form .input-box textarea:valid ~ span {
   color: #e91e63;
   font-size: 12px;
   transform: translateY(-20px);
+  opacity: 0; 
 }
 
 .contact-form .input-box input[type="submit"] {
