@@ -3,6 +3,11 @@ import "../css/about.css";
 import "../css/brief.css";
 import "../css/whybuy.css";
 import "../css/takeproduct.css";
+import "../css/testimonial.css";
+import "../css/buying.css";
+import "../css/footer.css";
+import "../css/navbar.css";
+
 
 
 
@@ -26,6 +31,7 @@ const About = () => (
     </div>
       <div className="about-right">
         <img src="/writing.jpg" alt="Writing" className="side-image" />
+        <img src="/writing2.png" alt="Writing small" className="mobile" />
       </div>
   </div>
 );

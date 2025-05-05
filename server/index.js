@@ -21,6 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
 
+mongoose.set('strictQuery', false);
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
@@ -71,7 +72,6 @@ app.post("/login", async (req, res) => {
           secure: true,
           sameSite: "None"
         }).json({
-        
           id: userDoc._id,
           username,
         });
@@ -82,8 +82,14 @@ app.post("/login", async (req, res) => {
   }
 });
 
+
 app.get("/profile", (req, res) => {
   const { token } = req.cookies;
+    // Check if token is missing
+    if (!token) {
+      return res.status(401).json({ error: "JWT must be provided" });
+    }
+  
   jwt.verify(token, secret, {}, (err, info) => {
     if (err) {
       console.error(err);

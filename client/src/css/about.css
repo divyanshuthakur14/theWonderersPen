@@ -8,6 +8,7 @@
     align-items: center;
     box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
+    position: relative;
   }
   @keyframes slideInFromLeftWithOpacity {
     0% {
@@ -59,7 +60,6 @@
     cursor: pointer;
     border-radius: 50px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 30px;
     background: transparent;
   }
   .about-right {
@@ -84,16 +84,46 @@
     height: 600px;
     object-fit: cover;
     animation: slideInFromRight 1.5s ease-out forwards;
+    display: block;
   }
-  
-  /* Responsive Styles */
+  .mobile {
+    display: none;
+    animation: slideInFromRight 1.5s ease-out forwards;
+  }
   @media (max-width: 768px) {
+    .side-image {
+      display: none;
+    }
+    .mobile {
+      display: block;
+
+    }
+    @keyframes slideInFromRight {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
     .about {
       flex-direction: column;
       height: auto;
       padding: 20px;
     }
-  
+
+    .about-left{
+      position: relative;
+      z-index: 2;
+      
+    }
+    .about-right{
+      position: absolute;
+      z-index: 1;
+    }
+   
     .about-left,
     .about-right {
       flex: none;
@@ -123,8 +153,6 @@
       object-fit: cover;
     }
   }
-  
-  /* Additional Styles for Smaller Screens */
   @media (max-width: 480px) {
     .header {
       font-size: 2rem;
